@@ -1,5 +1,7 @@
 # RuneLite fork created for working on a school course, don't use for actual runescaping.
 
+The goal of the course is to understand and implement automatic software validation, so I will be using this fork to build a Jenkins environment that builds RuneLite and runs tests and static analysis
+
 ![](https://runelite.net/img/logo.png)
 # runelite [![Travis](https://img.shields.io/travis/runelite/runelite.svg)](https://travis-ci.org/runelite/runelite) [![Discord](https://img.shields.io/discord/301497432909414422.svg)](https://discord.gg/mePCs8U)
 
