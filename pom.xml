@@ -44,6 +44,7 @@
 		<checkstyle.skip>true</checkstyle.skip>
 
 		<rs.version>179</rs.version>
+		<argLine>-Xmx512m</argLine>
 	</properties>
 
 	<licenses>
@@ -172,7 +173,6 @@
 				<version>2.18</version>
 				<configuration>
 					<enableAssertions>true</enableAssertions>
-					<argLine>-Xmx512m</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
