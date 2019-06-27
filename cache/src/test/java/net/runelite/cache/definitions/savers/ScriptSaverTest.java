@@ -39,7 +39,6 @@ import org.junit.Test;
 public class ScriptSaverTest
 {
 	private static final String SCRIPT_RESOURCE = "/net/runelite/cache/script/assembler/91.rs2asm";
-	private static final String SCRIPT_RESOURCE_UNICODE = "/net/runelite/cache/script/assembler/Unicode.rs2asm";
 
 	@Test
 	public void testSave() throws IOException
@@ -51,16 +50,4 @@ public class ScriptSaverTest
 		ScriptDefinition loadedScripot = new ScriptLoader().load(91, saved);
 		assertEquals(script, loadedScripot);
 	}
-
-	@Test
-	public void testSaveUnicode() throws IOException
-	{
-		Instructions instructions = new Instructions();
-		instructions.init();
-		ScriptDefinition script = new Assembler(instructions).assemble(getClass().getResourceAsStream(SCRIPT_RESOURCE_UNICODE));
-		byte[] saved = new ScriptSaver().save(script);
-		ScriptDefinition loadedScripot = new ScriptLoader().load(1001, saved);
-		assertEquals(script, loadedScripot);
-	}
-
 }
