@@ -34,7 +34,7 @@ import net.runelite.client.config.ModifierlessKeybind;
 public class HotkeyButton extends JButton
 {
 	@Getter
-	private Keybind value;
+	transient private Keybind value;
 
 	public HotkeyButton(Keybind value, boolean modifierless)
 	{

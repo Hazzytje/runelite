@@ -47,7 +47,7 @@ public class ColorValueSlider extends JPanel
 	private int value = ColorUtil.MAX_RGB_VALUE + KNOB_WIDTH;
 
 	@Setter
-	private Consumer<Integer> onValueChanged;
+	transient private Consumer<Integer> onValueChanged;
 
 	ColorValueSlider()
 	{

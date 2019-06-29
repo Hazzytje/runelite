@@ -45,9 +45,9 @@ import net.runelite.client.ui.FontManager;
 @Slf4j
 public class FarmingTabPanel extends TabContentPanel
 {
-	private final FarmingTracker farmingTracker;
-	private final ItemManager itemManager;
-	private final TimeTrackingConfig config;
+	transient private final FarmingTracker farmingTracker;
+	transient private final ItemManager itemManager;
+	transient private final TimeTrackingConfig config;
 	private final List<TimeablePanel<FarmingPatch>> patchPanels;
 
 	FarmingTabPanel(

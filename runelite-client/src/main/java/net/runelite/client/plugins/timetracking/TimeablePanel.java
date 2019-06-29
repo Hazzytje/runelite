@@ -41,7 +41,7 @@ import net.runelite.client.ui.components.shadowlabel.JShadowedLabel;
 @Getter
 public class TimeablePanel<T> extends JPanel
 {
-	private final T timeable;
+	transient private final T timeable;
 	private final JLabel icon = new JLabel();
 	private final JLabel estimate = new JLabel();
 	private final ThinProgressBar progress = new ThinProgressBar();

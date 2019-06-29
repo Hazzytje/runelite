@@ -64,7 +64,7 @@ class WorldSwitcherPanel extends PluginPanel
 	private boolean ascendingOrder = true;
 
 	private ArrayList<WorldTableRow> rows = new ArrayList<>();
-	private WorldHopperPlugin plugin;
+	transient private WorldHopperPlugin plugin;
 	@Setter(AccessLevel.PACKAGE)
 	private SubscriptionFilterMode filterMode;
 

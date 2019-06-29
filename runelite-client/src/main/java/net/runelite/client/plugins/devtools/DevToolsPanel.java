@@ -34,8 +34,8 @@ import net.runelite.client.ui.PluginPanel;
 
 class DevToolsPanel extends PluginPanel
 {
-	private final Client client;
-	private final DevToolsPlugin plugin;
+	transient private final Client client;
+	transient private final DevToolsPlugin plugin;
 
 	private final WidgetInspector widgetInspector;
 	private final VarInspector varInspector;

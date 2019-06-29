@@ -64,7 +64,7 @@ public class ScreenMarkerPluginPanel extends PluginPanel
 	private final PluginErrorPanel noMarkersPanel = new PluginErrorPanel();
 
 	@Inject
-	private ScreenMarkerPlugin plugin;
+	transient private ScreenMarkerPlugin plugin;
 
 	@Getter
 	private Color selectedColor = DEFAULT_BORDER_COLOR;

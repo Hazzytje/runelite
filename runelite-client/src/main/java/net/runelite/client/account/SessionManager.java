@@ -124,7 +124,9 @@ public class SessionManager
 
 	private void deleteSession()
 	{
-		SESSION_FILE.delete();
+		if(!SESSION_FILE.delete()){
+			log.debug("Could not delete session file {}", SESSION_FILE);
+		}
 	}
 
 	/**

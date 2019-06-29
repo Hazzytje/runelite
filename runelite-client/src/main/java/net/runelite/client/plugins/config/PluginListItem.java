@@ -62,15 +62,15 @@ class PluginListItem extends JPanel
 
 	@Getter
 	@Nullable
-	private final Plugin plugin;
+	transient private final Plugin plugin;
 
 	@Nullable
 	@Getter(AccessLevel.PACKAGE)
-	private final Config config;
+	transient private final Config config;
 
 	@Nullable
 	@Getter(AccessLevel.PACKAGE)
-	private final ConfigDescriptor configDescriptor;
+	transient private final ConfigDescriptor configDescriptor;
 
 	@Getter
 	private final String name;

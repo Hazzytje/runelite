@@ -85,9 +85,9 @@ class VarInspector extends JFrame
 
 	private final static int MAX_LOG_ENTRIES = 10_000;
 
-	private final Client client;
+	transient private final Client client;
 	private final DevToolsPlugin plugin;
-	private final EventBus eventBus;
+	transient private final EventBus eventBus;
 
 	private final JPanel tracker = new JPanel();
 
@@ -97,7 +97,7 @@ class VarInspector extends JFrame
 	private int[] oldVarps2 = null;
 	private int numVarbits = 10000;
 
-	private Map<Integer, Object> varcs = null;
+	transient private Map<Integer, Object> varcs = null;
 
 	@Inject
 	VarInspector(Client client, EventBus eventBus, DevToolsPlugin plugin)

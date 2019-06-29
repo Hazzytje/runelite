@@ -77,10 +77,10 @@ class WorldTableRow extends JPanel
 	private JLabel playerCountField;
 	private JLabel activityField;
 	private JLabel pingField;
-	private BiConsumer<World, Boolean> onFavorite;
+	transient private BiConsumer<World, Boolean> onFavorite;
 
 	@Getter
-	private final World world;
+	transient private final World world;
 
 	@Getter(AccessLevel.PACKAGE)
 	private int updatedPlayerCount;

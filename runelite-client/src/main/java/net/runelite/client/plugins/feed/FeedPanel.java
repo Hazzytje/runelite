@@ -102,8 +102,8 @@ class FeedPanel extends PluginPanel
 		OSRS_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(FeedPanel.class, "osrs.png"));
 	}
 
-	private final FeedConfig config;
-	private final Supplier<FeedResult> feedSupplier;
+	transient private final FeedConfig config;
+	transient private final Supplier<FeedResult> feedSupplier;
 
 	FeedPanel(FeedConfig config, Supplier<FeedResult> feedSupplier)
 	{

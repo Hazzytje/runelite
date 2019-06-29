@@ -39,7 +39,7 @@ import javax.swing.JToolBar;
 public class ClientPluginToolbar extends JToolBar
 {
 	private static final int TOOLBAR_WIDTH = 36, TOOLBAR_HEIGHT = 503;
-	private final Map<NavigationButton, Component> componentMap = new TreeMap<>((a, b) ->
+	transient private final Map<NavigationButton, Component> componentMap = new TreeMap<>((a, b) ->
 		ComparisonChain
 			.start()
 			.compareTrueFirst(a.isTab(), b.isTab())

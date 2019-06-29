@@ -121,7 +121,7 @@ public class HiscorePanel extends PluginPanel
 	@Nullable
 	private Client client;
 
-	private final HiscoreConfig config;
+	transient private final HiscoreConfig config;
 
 	private final IconTextField searchBar;
 
@@ -132,9 +132,9 @@ public class HiscorePanel extends PluginPanel
 	/* Container of all the selectable endpoints (ironman, deadman, etc) */
 	private final MaterialTabGroup tabGroup;
 
-	private final HiscoreClient hiscoreClient = new HiscoreClient();
+	transient private final HiscoreClient hiscoreClient = new HiscoreClient();
 
-	private HiscoreResult result;
+	transient private HiscoreResult result;
 
 	/* The currently selected endpoint */
 	private HiscoreEndpoint selectedEndPoint;

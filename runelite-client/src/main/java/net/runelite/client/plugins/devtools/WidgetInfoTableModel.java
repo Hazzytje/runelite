@@ -45,7 +45,7 @@ public class WidgetInfoTableModel extends AbstractTableModel
 
 	private static final List<WidgetField> fields = populateWidgetFields();
 
-	private Widget widget = null;
+	transient private Widget widget = null;
 	private Map<WidgetField, Object> values = null;
 
 	public void setWidget(Widget w)

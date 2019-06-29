@@ -447,6 +447,10 @@ class Skybox
 			}
 		}
 
+		// Make sure t is not zero.
+		// SonarCube thinks dividing by 0.0 (a double!) wrong, but it is not, because it will become INFINITY.
+		t = Math.max(t, Double.MIN_VALUE);
+
 		// Convert back to int range values, and bounds check while we are at it
 		byte ay = (byte) Math.min(Math.max(Math.round(ty / t * 255.d), 0), 255);
 		byte aco = (byte) Math.min(Math.max(Math.round(tco * 128.d / t), -128), 127);

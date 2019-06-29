@@ -50,7 +50,7 @@ public class ColorValuePanel extends JPanel
 	private ColorValueSlider slider = new ColorValueSlider();
 	private JTextField input = new JTextField();
 
-	private Consumer<Integer> onValueChanged;
+	transient private Consumer<Integer> onValueChanged;
 
 	void setOnValueChanged(Consumer<Integer> c)
 	{

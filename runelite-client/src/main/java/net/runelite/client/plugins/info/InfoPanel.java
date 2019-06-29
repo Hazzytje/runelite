@@ -77,22 +77,22 @@ public class InfoPanel extends PluginPanel
 
 	@Inject
 	@Nullable
-	private Client client;
+	transient private Client client;
 
 	@Inject
-	private RuneLiteProperties runeLiteProperties;
+	transient private RuneLiteProperties runeLiteProperties;
 
 	@Inject
-	private EventBus eventBus;
+	transient private EventBus eventBus;
 
 	@Inject
-	private SessionManager sessionManager;
+	transient private SessionManager sessionManager;
 
 	@Inject
-	private ScheduledExecutorService executor;
+	transient private ScheduledExecutorService executor;
 
 	@Inject
-	private ConfigManager configManager;
+	transient private ConfigManager configManager;
 
 	static
 	{

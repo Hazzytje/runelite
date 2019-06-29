@@ -60,7 +60,7 @@ public class ClockTabPanel extends TabContentPanel
 	private static final ImageIcon ADD_ICON;
 	private static final ImageIcon ADD_ICON_HOVER;
 
-	private final ClockManager clockManager;
+	transient private final ClockManager clockManager;
 
 	private final List<ClockPanel> clockPanels = new ArrayList<>();
 

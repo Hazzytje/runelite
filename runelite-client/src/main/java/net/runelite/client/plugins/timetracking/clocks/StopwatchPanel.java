@@ -43,7 +43,7 @@ class StopwatchPanel extends ClockPanel
 	private static final Color LAP_DATA_COLOR = ColorScheme.LIGHT_GRAY_COLOR.darker();
 
 	private final JPanel lapsContainer;
-	private final Stopwatch stopwatch;
+	transient private final Stopwatch stopwatch;
 
 	StopwatchPanel(ClockManager clockManager, Stopwatch stopwatch)
 	{

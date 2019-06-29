@@ -37,7 +37,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JRichTextPane extends JEditorPane
 {
-	private HyperlinkListener linkHandler;
+	transient private HyperlinkListener linkHandler;
 
 	public JRichTextPane()
 	{

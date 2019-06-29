@@ -50,8 +50,8 @@ import net.runelite.client.ui.components.materialtabs.MaterialTabGroup;
 
 class TimeTrackingPanel extends PluginPanel
 {
-	private final ItemManager itemManager;
-	private final TimeTrackingConfig config;
+	transient private final ItemManager itemManager;
+	transient private final TimeTrackingConfig config;
 
 	/* This is the panel the tabs' respective panels will be displayed on. */
 	private final JPanel display = new JPanel();

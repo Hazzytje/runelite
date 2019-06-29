@@ -58,17 +58,17 @@ class SkillCalculator extends JPanel
 	private static final DecimalFormat XP_FORMAT = new DecimalFormat("#.#");
 
 	private final UICalculatorInputArea uiInput;
-	private final Client client;
-	private final SpriteManager spriteManager;
-	private final ItemManager itemManager;
+	transient private final Client client;
+	transient private final SpriteManager spriteManager;
+	transient private final ItemManager itemManager;
 	private final List<UIActionSlot> uiActionSlots = new ArrayList<>();
-	private final CacheSkillData cacheSkillData = new CacheSkillData();
+	transient private final CacheSkillData cacheSkillData = new CacheSkillData();
 	private final UICombinedActionSlot combinedActionSlot;
 	private final ArrayList<UIActionSlot> combinedActionSlots = new ArrayList<>();
 	private final List<JCheckBox> bonusCheckBoxes = new ArrayList<>();
 	private final IconTextField searchBar = new IconTextField();
 
-	private SkillData skillData;
+	transient private SkillData skillData;
 	private int currentLevel = 1;
 	private int currentXP = Experience.getXpForLevel(currentLevel);
 	private int targetLevel = currentLevel + 1;

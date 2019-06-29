@@ -39,10 +39,10 @@ import net.runelite.client.ui.ColorScheme;
 
 class OverviewTabPanel extends TabContentPanel
 {
-	private final TimeTrackingConfig config;
-	private final FarmingTracker farmingTracker;
-	private final BirdHouseTracker birdHouseTracker;
-	private final ClockManager clockManager;
+	transient private final TimeTrackingConfig config;
+	transient private final FarmingTracker farmingTracker;
+	transient private final BirdHouseTracker birdHouseTracker;
+	transient private final ClockManager clockManager;
 
 	private final OverviewItemPanel timerOverview;
 	private final OverviewItemPanel stopwatchOverview;

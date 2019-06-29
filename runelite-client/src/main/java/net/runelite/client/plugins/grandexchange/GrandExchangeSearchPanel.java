@@ -65,9 +65,9 @@ class GrandExchangeSearchPanel extends JPanel
 	private final GridBagConstraints constraints = new GridBagConstraints();
 	private final CardLayout cardLayout = new CardLayout();
 
-	private final ClientThread clientThread;
-	private final ItemManager itemManager;
-	private final ScheduledExecutorService executor;
+	transient private final ClientThread clientThread;
+	transient private final ItemManager itemManager;
+	transient private final ScheduledExecutorService executor;
 
 	private final IconTextField searchBar = new IconTextField();
 

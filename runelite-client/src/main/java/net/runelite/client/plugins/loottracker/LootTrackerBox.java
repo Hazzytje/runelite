@@ -59,12 +59,12 @@ class LootTrackerBox extends JPanel
 	private final JPanel itemContainer = new JPanel();
 	private final JLabel priceLabel = new JLabel();
 	private final JLabel subTitleLabel = new JLabel();
-	private final ItemManager itemManager;
+	transient private final ItemManager itemManager;
 	@Getter(AccessLevel.PACKAGE)
 	private final String id;
 
 	@Getter
-	private final List<LootTrackerRecord> records = new ArrayList<>();
+	transient private final List<LootTrackerRecord> records = new ArrayList<>();
 
 	private long totalPrice;
 	private boolean hideIgnoredItems;

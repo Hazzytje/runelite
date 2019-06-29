@@ -48,7 +48,7 @@ public class HuePanel extends JPanel
 	private int selectedY;
 
 	@Setter
-	private Consumer<Integer> onColorChange;
+	transient private Consumer<Integer> onColorChange;
 
 	HuePanel(int height)
 	{

@@ -66,7 +66,7 @@ public class MaterialTab extends JLabel
 
 	/* To be execuded when the tab is selected */
 	@Setter
-	private BooleanSupplier onSelectEvent;
+	transient private BooleanSupplier onSelectEvent;
 
 	@Getter
 	private boolean selected;

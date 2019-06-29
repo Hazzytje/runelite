@@ -82,7 +82,7 @@ public class RuneliteColorPicker extends JDialog
 	private Color selectedColor;
 
 	@Setter
-	private Consumer<Color> onColorChange;
+	transient private Consumer<Color> onColorChange;
 
 	public RuneliteColorPicker(Window parent, Color previousColor, String title, boolean alphaHidden)
 	{

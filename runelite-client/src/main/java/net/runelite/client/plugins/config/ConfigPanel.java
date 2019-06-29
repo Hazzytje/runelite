@@ -107,11 +107,11 @@ public class ConfigPanel extends PluginPanel
 	private static final String RUNELITE_PLUGIN = "RuneLite";
 	private static final String CHAT_COLOR_PLUGIN = "Chat Color";
 
-	private final PluginManager pluginManager;
-	private final ConfigManager configManager;
-	private final ScheduledExecutorService executorService;
-	private final RuneLiteConfig runeLiteConfig;
-	private final ChatColorConfig chatColorConfig;
+	transient private final PluginManager pluginManager;
+	transient private final ConfigManager configManager;
+	transient private final ScheduledExecutorService executorService;
+	transient private final RuneLiteConfig runeLiteConfig;
+	transient private final ChatColorConfig chatColorConfig;
 	private final List<PluginListItem> pluginList = new ArrayList<>();
 
 	private final IconTextField searchBar = new IconTextField();

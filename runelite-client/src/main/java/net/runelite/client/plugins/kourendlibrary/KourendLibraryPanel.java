@@ -55,7 +55,7 @@ class KourendLibraryPanel extends PluginPanel
 	private static final ImageIcon RESET_CLICK_ICON;
 
 	@Inject
-	private Library library;
+	transient private Library library;
 
 	private final HashMap<Book, BookPanel> bookPanels = new HashMap<>();
 

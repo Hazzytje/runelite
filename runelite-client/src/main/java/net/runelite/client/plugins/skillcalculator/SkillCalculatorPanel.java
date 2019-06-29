@@ -44,7 +44,7 @@ import net.runelite.client.ui.components.materialtabs.MaterialTabGroup;
 class SkillCalculatorPanel extends PluginPanel
 {
 	private final SkillCalculator uiCalculator;
-	private final SkillIconManager iconManager;
+	transient private final SkillIconManager iconManager;
 	private final MaterialTabGroup tabGroup;
 
 	SkillCalculatorPanel(SkillIconManager iconManager, Client client, SpriteManager spriteManager, ItemManager itemManager)

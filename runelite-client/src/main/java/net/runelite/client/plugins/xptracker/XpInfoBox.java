@@ -90,7 +90,7 @@ class XpInfoBox extends JPanel
 	private final JLabel actionsLeft = new JLabel();
 	private final JMenuItem pauseSkill = new JMenuItem("Pause");
 
-	private final XpTrackerConfig xpTrackerConfig;
+	transient private final XpTrackerConfig xpTrackerConfig;
 
 	private boolean paused = false;
 

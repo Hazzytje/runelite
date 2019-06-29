@@ -42,9 +42,9 @@ public class BirdHouseTabPanel extends TabContentPanel
 {
 	private static final Color COMPLETED_COLOR = ColorScheme.PROGRESS_COMPLETE_COLOR.darker();
 
-	private final ItemManager itemManager;
-	private final BirdHouseTracker birdHouseTracker;
-	private final TimeTrackingConfig config;
+	transient private final ItemManager itemManager;
+	transient private final BirdHouseTracker birdHouseTracker;
+	transient private final TimeTrackingConfig config;
 	private final List<TimeablePanel<BirdHouseSpace>> spacePanels;
 
 	BirdHouseTabPanel(ItemManager itemManager, BirdHouseTracker birdHouseTracker, TimeTrackingConfig config)

@@ -86,8 +86,8 @@ class ScreenMarkerPanel extends JPanel
 	private static final ImageIcon DELETE_ICON;
 	private static final ImageIcon DELETE_HOVER_ICON;
 
-	private final ScreenMarkerPlugin plugin;
-	private final ScreenMarkerOverlay marker;
+	transient private final ScreenMarkerPlugin plugin;
+	transient private final ScreenMarkerOverlay marker;
 
 	private final JLabel borderColorIndicator = new JLabel();
 	private final JLabel fillColorIndicator = new JLabel();
@@ -100,7 +100,7 @@ class ScreenMarkerPanel extends JPanel
 	private final JLabel cancel = new JLabel("Cancel");
 	private final JLabel rename = new JLabel("Rename");
 
-	private final SpinnerModel spinnerModel = new SpinnerNumberModel(5, 0, Integer.MAX_VALUE, 1);
+	transient private final SpinnerModel spinnerModel = new SpinnerNumberModel(5, 0, Integer.MAX_VALUE, 1);
 	private final JSpinner thicknessSpinner = new JSpinner(spinnerModel);
 
 	private boolean visible;

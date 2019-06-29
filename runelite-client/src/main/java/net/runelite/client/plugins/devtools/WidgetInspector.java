@@ -59,11 +59,11 @@ import net.runelite.client.ui.ClientUI;
 @Slf4j
 class WidgetInspector extends JFrame
 {
-	private final Client client;
+	transient private final Client client;
 	private final ClientThread clientThread;
-	private final DevToolsConfig config;
-	private final DevToolsOverlay overlay;
-	private final DevToolsPlugin plugin;
+	transient private final DevToolsConfig config;
+	transient private final DevToolsOverlay overlay;
+	transient private final DevToolsPlugin plugin;
 
 	private final JTree widgetTree;
 	private final WidgetInfoTableModel infoTableModel;

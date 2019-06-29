@@ -40,7 +40,7 @@ class ClientTitleToolbar extends JPanel
 {
 	private static final int TITLEBAR_SIZE = 23;
 	private static final int ITEM_PADDING = 4;
-	private final Map<NavigationButton, Component> componentMap = new TreeMap<>((a, b) ->
+	transient private final Map<NavigationButton, Component> componentMap = new TreeMap<>((a, b) ->
 		ComparisonChain
 			.start()
 			.compare(a.getPriority(), b.getPriority())

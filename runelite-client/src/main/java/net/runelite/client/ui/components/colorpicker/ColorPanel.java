@@ -46,13 +46,13 @@ public class ColorPanel extends JPanel
 
 	private final int size;
 
-	private BufferedImage image;
+	transient private BufferedImage image;
 	private Point targetPosition;
 	private int selectedY;
 	private boolean forceRedraw;
 
 	@Setter
-	private Consumer<Color> onColorChange;
+	transient private Consumer<Color> onColorChange;
 
 	ColorPanel(int size)
 	{

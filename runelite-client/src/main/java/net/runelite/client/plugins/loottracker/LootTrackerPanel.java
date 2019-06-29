@@ -97,9 +97,9 @@ class LootTrackerPanel extends PluginPanel
 	private final List<LootTrackerRecord> records = new ArrayList<>();
 	private final List<LootTrackerBox> boxes = new ArrayList<>();
 
-	private final ItemManager itemManager;
+	transient private final ItemManager itemManager;
 	private final LootTrackerPlugin plugin;
-	private final LootTrackerConfig config;
+	transient private final LootTrackerConfig config;
 
 	private boolean groupLoot;
 	private boolean hideIgnoredItems;

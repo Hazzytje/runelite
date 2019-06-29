@@ -64,7 +64,7 @@ class UIActionSlot extends JPanel
 	private static final Dimension ICON_SIZE = new Dimension(32, 32);
 
 	@Getter(AccessLevel.PACKAGE)
-	private final SkillDataEntry action;
+	transient private final SkillDataEntry action;
 	private final JShadowedLabel uiLabelActions;
 
 	private final JPanel uiInfo;

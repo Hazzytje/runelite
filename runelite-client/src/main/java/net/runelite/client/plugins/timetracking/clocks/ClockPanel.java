@@ -67,7 +67,7 @@ abstract class ClockPanel extends JPanel
 	private final FlatTextField displayInput;
 
 	@Getter
-	private final Clock clock;
+	transient private final Clock clock;
 
 	private final String clockType;
 	private final boolean editable;

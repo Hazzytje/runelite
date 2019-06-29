@@ -24,18 +24,13 @@
  */
 package net.runelite.client.util;
 
-import java.awt.AWTException;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Frame;
-import java.awt.Image;
-import java.awt.SystemTray;
-import java.awt.TrayIcon;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.concurrent.Callable;
 import java.util.function.BiConsumer;
@@ -217,6 +212,11 @@ public class SwingUtil
 				if (result == JOptionPane.OK_OPTION)
 				{
 					callback.run();
+					// This exit call is on purpose.
+					// If we try to exit the application by closing all JFrames, f.e. with
+					// Arrays.stream(Frame.getFrames()).forEach(Window::dispose);
+					// then it is possible that a non-daemon thread still is running and
+					// the application will not close.
 					System.exit(0);
 				}
 			}

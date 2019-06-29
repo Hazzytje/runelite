@@ -29,7 +29,7 @@ import net.runelite.api.widgets.WidgetItem;
 
 class WidgetItemNode extends DefaultMutableTreeNode
 {
-	private final WidgetItem widgetItem;
+	transient private final WidgetItem widgetItem;
 
 	public WidgetItemNode(WidgetItem widgetItem)
 	{
